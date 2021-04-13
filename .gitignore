@@ -1,0 +1,8 @@
+/.DS_Store
+/.env
+/.idea
+/htpasswd
+/docker/development/nginx/auth/htpasswd
+/docker/production/nginx/conf.d/registry.conf
+/provisioning/hosts.yml
+/provisioning/roles/registry/defaults/main.yml

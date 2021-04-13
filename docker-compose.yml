@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+    nginx:
+        image: nginx:alpine
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./docker/development/nginx/conf.d:/etc/nginx/conf.d
+            - ./docker/development/nginx/auth/htpasswd:/etc/nginx/auth/htpasswd
+        depends_on:
+            - registry
+
+    registry:
+        image: registry:2
+        volumes:
+            - registry:/var/lib/registry
+
+volumes:
+    registry:
